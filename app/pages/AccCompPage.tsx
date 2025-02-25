@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './AccCompPage.css';
+// @ts-ignore
 
 const AccCompPage = () => {
 
