@@ -6,7 +6,9 @@ const AccCompPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (typeof window !== 'undefined') {
+      window.scrollTo(0, 0);
+    }
   }, []);
 
   const openModal = () => {
@@ -49,7 +51,7 @@ const AccCompPage = () => {
           <p>Analyzed the accessibility of dropdown menus in Google Chrome, Zoom, and Spotify across various input methods (mouse, keyboard, touch).</p>
           <br />
           <ul>
-              <li><strong>Ellipsis Button Familiarity:</strong> Zoom and Spotify's use of the ellipsis button is intuitive and universally recognized, simplifying menu discovery.</li>
+              <li><strong>Ellipsis Button Familiarity:</strong> Zoom and Spotify&apos;s use of the ellipsis button is intuitive and universally recognized, simplifying menu discovery.</li>
               <li><strong>Keyboard Navigation Gaps:</strong> Chrome excels in keyboard shortcuts, but Zoom skips the ellipsis button when tabbing, blocking full keyboard access.</li>
               <li><strong>Touch-Friendly Design:</strong> Spotify and Chrome use half-expanded menus and swipeable elements, balancing visibility and space efficiency.</li>
           </ul>
@@ -69,13 +71,13 @@ const AccCompPage = () => {
           <ul>
               <li><strong>Visual Feedback Clarity:</strong> Hover and click actions provide clear visual cues, but Chrome lacks option highlighting for touch users.</li>
               <li><strong>Screen Reader Detail:</strong> Chrome reads item counts and labels, while Spotify struggles with screen reader categorization for complex menus.</li>
-              <li><strong>Focus Order Efficiency:</strong> Spotify's tab order is fast, but the lack of clear category groupings makes memorization difficult.</li>
+              <li><strong>Focus Order Efficiency:</strong> Spotify&apos;s tab order is fast, but the lack of clear category groupings makes memorization difficult.</li>
           </ul>
         </section>
 
         <section>
-          <h2>Part 3: Redesigning Spotify’s Dropdown Menu</h2>
-          <p>Implemented accessibility improvements for Spotify’s menu, like scrollable buttons, shortcut hints, and persistent menus.</p>
+          <h2>Part 3: Redesigning Spotify&apos;s Dropdown Menu</h2>
+          <p>Implemented accessibility improvements for Spotify&apos;s menu, like scrollable buttons, shortcut hints, and persistent menus.</p>
           <br />
           <ul>
               <li><strong>Shortcut Integration:</strong> Adding shortcuts boosts efficiency for power users, but raises the initial learning curve.</li>
